@@ -1,0 +1,56 @@
+# Determine your group members
+def housekeeping():
+    group = input("Enter the members in your group: ")
+    return group
+
+# Determine your name
+def getName():
+    name = input("Enter your name: ")
+    return name
+
+# Determine your major 
+def getMajor():
+    major = input("Enter your major: ")
+    return major
+
+# Determine your advisor
+def findAdvisor(major):
+    if (major == "Computers"):
+        print("Computer Science is Albert Nault")
+    elif (major == "AA"):
+        print("AA is Stephanie Smith")
+    elif (major == "Athletics"):
+        print("Athletics is Melissa Miller")
+    elif (major == "Nursing"):
+        print("Nursing is Sarah Gingrich")
+    elif (major == "Health Professions"):
+        print("Health Professions is Cassie Steves")
+    else:
+        print("No advisor assigned")
+
+# Determine your grade
+def calcGrade():
+    grade = int(input("Enter your grade: "))
+    if (grade >= 90) and (grade <= 100):
+        print("A")
+    elif (grade >= 80) and (grade <= 89):
+        print("B")
+    elif (grade >= 70) and (grade <= 79):
+        print("C")
+    elif (grade >= 60) and (grade <= 69):
+        print("D")
+    else:
+        print("F")
+        
+# Determine whether the user continues or not
+def main(): 
+    x = input("Please enter Y to continue, otherwise stop: ")
+    while (x.upper() == 'Y'):
+        group = housekeeping() 
+        name = getName() 
+        major = getMajor() 
+        findAdvisor(major) 
+        calcGrade() 
+        x = input("Please enter Y to continue, otherwise stop: ")
+
+main()
