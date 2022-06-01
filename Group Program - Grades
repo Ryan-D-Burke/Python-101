@@ -45,7 +45,7 @@ def calcGrade():
 # Determine whether the user continues or not
 def main(): 
     x = input("Please enter Y to continue, otherwise stop: ")
-    while (x.upper() == 'Y'):
+    while (x == "Y"):
         group = housekeeping() 
         name = getName() 
         major = getMajor() 
