@@ -1,0 +1,45 @@
+# Code snippet 1 for part A
+x = int(input("Enter a number: "))
+if x > 100:
+    y = 20
+    z = 40
+    print("y is", y,"z is,", z)
+else:
+    print("x is less than 100")
+
+# Code snippet 2 for Part A
+a = int(input("Enter a number: "))
+if a < 10:
+    b = 0
+    c = 1
+    print("b is", b,"and c is", c)
+else:
+    print("a is greater than 10")
+
+# Code snippet 3 for Part A
+speed = int(input("Enter your speed: "))
+if (speed >= 55) and (speed <= 70):
+    print("Speed is Normal")
+else:
+    print("Not going the Speed Limit")
+
+# Code snippet 4 for Part A
+Amount1 = int(input("Enter the first amount: "))
+Amount2 = int(input("Enter the second amount: "))
+if (Amount1 > 10) and (Amount2 < 100):
+    if (Amount1 > Amount2):
+        print("The first amount is greater")
+    elif (Amount1 < Amount2):
+        print("The second amount is greater")
+else:
+    print("the amounts you entered are not in range")
+   
+# Code snippet 1 for Part B   
+testScore = int(input("Enter your test score: "))
+classRank = int(input("Enter your class rank: "))
+if (testScore >= 90) and (classRank >= 25):
+    print("Admitted")
+elif (testScore >= 80) and (classRank >= 50):
+    print("Admitted")        
+else:
+    print("Rejected")    
