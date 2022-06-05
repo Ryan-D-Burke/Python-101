@@ -1,3 +1,14 @@
+# Determine whether the user continues or not
+def main(): 
+    x = input("Please enter Y to continue, otherwise stop: ")
+    while (x == "Y"):
+        group = housekeeping() 
+        name = getName() 
+        major = getMajor() 
+        findAdvisor(major) 
+        calcGrade() 
+        x = input("Please enter Y to continue, otherwise stop: ")
+
 # Determine your group members
 def housekeeping():
     group = input("Enter the members in your group: ")
@@ -42,15 +53,4 @@ def calcGrade():
     else:
         print("F")
         
-# Determine whether the user continues or not
-def main(): 
-    x = input("Please enter Y to continue, otherwise stop: ")
-    while (x == "Y"):
-        group = housekeeping() 
-        name = getName() 
-        major = getMajor() 
-        findAdvisor(major) 
-        calcGrade() 
-        x = input("Please enter Y to continue, otherwise stop: ")
-
 main()
