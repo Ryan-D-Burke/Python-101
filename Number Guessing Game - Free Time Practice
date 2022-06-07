@@ -1,0 +1,30 @@
+import random
+
+
+def main():
+    play = input("Enter X to play the game, otherwise quit: ")
+    while play.upper() == "X":
+        random_number = random.randint(1, 100)
+        win = True
+        turns = 0
+        turns_left = 10
+        while win:
+            guess = int(input(f"Guess the correct number, it is between 1 and 100 (You have {turns_left} tries): "))
+            turns += 1
+            turns_left -= 1
+            if random_number == int(guess):
+                print("You managed to guess the correct number")
+                print("It took", turns, "turns for you to guess it correctly")
+                break
+            elif turns > 9:
+                print("You took too many tries")
+                break
+            else:
+                if random_number > int(guess):
+                    print("You guessed to low, try to guess a higher number")
+                elif random_number < int(guess):
+                    print("You guessed to high, try to guess a lower number")
+        play = input("Enter X to play the game, otherwise quit: ")
+
+
+main()
