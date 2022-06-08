@@ -1,0 +1,26 @@
+# Original list
+fruits = ["Apples", "Oranges", "Grapes", "Strawberries", "Pineapple", "Mango"]
+
+# Using list.append()
+fruits.append("Peach")
+
+# Using list.insert()
+fruits.insert(3, "Pear")
+
+# Using list.index() and printing the index
+print("There is", fruits.index("Oranges"), "instance of Oranges in the list")
+
+# Using list.remove()
+fruits.remove("Pineapple")
+
+# Using list.sort()
+fruits.sort()
+
+# Using list.reverse()
+fruits.reverse()
+
+# Using list.pop()
+fruits.pop(-2)
+
+# Printing the new list
+print(fruits)
