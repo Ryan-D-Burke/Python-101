@@ -6,7 +6,8 @@ def main():
     salesItems = get_salesItems()
     salesAmount = get_salesAmount()
     highSeller(salesItems, salesAmount)
-    
+
+
 def getInfo():
     date = datetime.datetime.now()
     name = input("Enter your name: ")
@@ -14,23 +15,28 @@ def getInfo():
     print("The class you are in is called COP1000")
     print("The current date is,", date)
 
+
 def get_ID():
     print("What is your ID number?")
     sales_ID = input("Enter your ID: ")
     return sales_ID
-    
+
+
 def get_salesItems():
     salesItems = int(input("Enter total items sold for this month: "))
     return salesItems
 
+
 def get_salesAmount():
     salesAmount = float(input("Enter total sales amount for this month: "))
     return salesAmount
+
 
 def highSeller(salesItems, salesAmount):
     if (salesItems >= 200) or (salesAmount >= 1000):
         print("You are a highseller!")
     else:
         print("You are not a highseller.")
-            
+ 
+ 
 main()
