@@ -9,20 +9,24 @@ def main():
         calcGrade() 
         x = input("Please enter Y to continue, otherwise stop: ")
 
+
 # Determine your group members
 def housekeeping():
     group = input("Enter the members in your group: ")
     return group
+
 
 # Determine your name
 def getName():
     name = input("Enter your name: ")
     return name
 
+
 # Determine your major 
 def getMajor():
     major = input("Enter your major: ")
     return major
+
 
 # Determine your advisor
 def findAdvisor(major):
@@ -52,5 +56,6 @@ def calcGrade():
         print("D")
     else:
         print("F")
-        
+
+
 main()
