@@ -7,7 +7,6 @@ if x > 100:
 else:
     print("x is less than 100")
 
-
 # Code snippet 2 for Part A
 a = int(input("Enter a number: "))
 if a < 10:
@@ -17,14 +16,12 @@ if a < 10:
 else:
     print("a is greater than 10")
 
-
 # Code snippet 3 for Part A
 speed = int(input("Enter your speed: "))
 if (speed >= 55) and (speed <= 70):
     print("Speed is Normal")
 else:
     print("Not going the Speed Limit")
-
 
 # Code snippet 4 for Part A
 Amount1 = int(input("Enter the first amount: "))
@@ -36,7 +33,6 @@ if (Amount1 > 10) and (Amount2 < 100):
         print("The second amount is greater")
 else:
     print("the amounts you entered are not in range")
- 
  
 # Code snippet 1 for Part B   
 testScore = int(input("Enter your test score: "))
