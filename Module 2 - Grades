@@ -43,6 +43,7 @@ def findAdvisor(major):
     else:
         print("No advisor assigned")
 
+
 # Determine your grade
 def calcGrade():
     grade = int(input("Enter your grade: "))
