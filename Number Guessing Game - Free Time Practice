@@ -8,6 +8,7 @@ def main():
         win = True
         turns = 0
         turns_left = 10
+        conditional = 9
         while win:
             guess = int(input(f"Guess the correct number, it is between 1 and 100 (You have {turns_left} tries): "))
             turns += 1
@@ -16,7 +17,7 @@ def main():
                 print("You managed to guess the correct number")
                 print("It took", turns, "turns for you to guess it correctly")
                 break
-            elif turns > 9:
+            elif turns > conditional:
                 print("You took too many tries")
                 break
             else:
