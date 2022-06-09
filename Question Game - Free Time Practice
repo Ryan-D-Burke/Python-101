@@ -1,0 +1,47 @@
+print("Welcome to my question game!")
+
+
+game = input("Do you want to play the game? ").lower()
+if game != "yes":
+    quit()
+else:
+    print("Let's continue.")
+
+
+score = 0
+
+
+answer = int(input("How much progress does it take to proc Burning Ruby? "))
+if answer == 800:
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect.")
+    
+
+answer = int(input("How much progress does it take to proc Bleeding Buable? "))
+if answer == 100:
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect.")
+    
+
+answer = input("What is the most popular Zombie Survival server as of right now? ")
+if answer == "Sunrust":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect.")
+    
+
+answer = input("What is the full name of the man who created Zombie Survival? ")
+if answer == "William Moodhe":
+    print("Correct!")
+    score += 1
+else:
+    print("Incorrect.")
+
+print("Congratulations you have finished the question game!")
+print(f"Your total score was {score}")
+print(f"You got a {(score/4) * 100}%.")
