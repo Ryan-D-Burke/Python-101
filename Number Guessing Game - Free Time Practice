@@ -1,31 +1,46 @@
 import random
 
 
-def main():
-    play = input("Enter X to play the game, otherwise quit: ")
-    while play.upper() == "X":
-        random_number = random.randint(1, 100)
-        win = True
-        turns = 0
-        turns_left = 10
-        conditional = 9
-        while win:
-            guess = int(input(f"Guess the correct number, it is between 1 and 100 (You have {turns_left} tries): "))
-            turns += 1
-            turns_left -= 1
-            if random_number == int(guess):
-                print("You managed to guess the correct number")
-                print("It took", turns, "turns for you to guess it correctly")
-                break
-            elif turns > conditional:
-                print("You took too many tries")
-                break
-            else:
-                if random_number > int(guess):
-                    print("You guessed to low, try to guess a higher number")
-                elif random_number < int(guess):
-                    print("You guessed to high, try to guess a lower number")
-        play = input("Enter X to play the game, otherwise quit: ")
+inserted_random_number = input("Enter a number to start the game: ")
+
+if inserted_random_number.isdigit():
+    inserted_random_number = int(inserted_random_number)
+
+    if inserted_random_number <= 0:
+        print("You must enter a number above 0")
+        quit()
+else:
+    print("You must Enter a number")
+    quit()
 
 
-main()
+
+random_number = random.randint(0, inserted_random_number)
+turns = 0
+chances = 10
+conditional = 9
+
+
+while True:
+    user_guess = input(f"Try to guess between 1 and {inserted_random_number} (You have {chances} left): ")
+    turns += 1
+    chances -= 1
+
+    if user_guess.isdigit():
+        user_guess = int(user_guess)
+    else:
+        print("Enter a number next time please.")
+        continue
+
+    if user_guess == random_number:
+        print("You guess the correct number!")
+        print("You got it in", turns, "turns")
+        break
+    elif turns > conditional:
+        print("You ran out of attempts.")
+        break
+    else:
+        if user_guess > random_number:
+            print("The number that you have entered is too high, try to guess lower.")
+        elif user_guess < random_number:
+            print("The number that you have entered is too low, try to guess higher.")
