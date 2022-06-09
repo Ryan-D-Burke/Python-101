@@ -6,5 +6,3 @@ if unit.upper() == "K":
 elif unit.upper() == "L":
     converted2 = (weight * 0.45359237)
     print("Your weight in kilograms is", round(converted2, 2)) 
-
-
