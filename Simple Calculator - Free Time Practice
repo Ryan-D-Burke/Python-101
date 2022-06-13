@@ -1,0 +1,22 @@
+# insert loop so user doesn't have to run the code over and over again
+while True:
+    # get user input for operator
+    operator = input("Enter +, -, *, / to pick an operator: ")
+    # continue asking the user to input the numbers they want to calculate 
+    n1 = int(input("Enter the first number of any choice: ")) # number 1
+    n2 = int(input("Enter the second number of any choice: ")) # number 2
+
+    if operator == "+":
+        print(n1, operator, n2, "=", n1 + n2) # addition
+
+    elif operator == "-":
+        print(n1, operator, n2, "=", n1 - n2) # subtraction
+
+    elif operator == "*":
+        print(n1, operator, n2, "=", n1 * n2) # multiplication
+
+    elif operator == "/":
+        print(n1, operator, n2, "=", n1 / n2) # division
+
+    else:
+        print("You did not select one of the 4 operators.") # user did not follow the directions
