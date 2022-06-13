@@ -2,6 +2,7 @@
 while True:
     # get user input for operator
     operator = input("Enter +, -, *, / to pick an operator: ")
+    
     # continue asking the user to input the numbers they want to calculate 
     n1 = int(input("Enter the first number of any choice: ")) # number 1
     n2 = int(input("Enter the second number of any choice: ")) # number 2
