@@ -1,0 +1,47 @@
+import random
+
+
+while True:
+    status_debuff_list = ["Wounds", "Winters Curse", "Sickness", "Gunk", "Frost", "Enfeebled", "Nightmare"]
+    status_buff_list = ["Last Stand", "Agility", "Strength", "Defense", "Perseverance", "Speed", "Focus"]
+
+    print("\nThese are the status debuffs:\n")
+    for status in status_debuff_list:
+        print(status, "\n")
+
+    print("\nThese are the status buffs:\n")
+    for status in status_buff_list:
+        print(status, "\n")
+
+    while True:
+        user_input = input("\nEnter (x) for a random status effect: ").lower()
+
+        if user_input != "x":
+            print("\nyou must enter x to start the game.")
+            continue
+        
+        else:
+            print("\nLet us see what status you acquired.\n")
+
+        while True:
+            status_debuff = 1
+            status_buff = 2
+            random_number = random.randint(1, 2)
+            random_list_debuffs = random.choice(status_debuff_list)
+            random_list_buffs = random.choice(status_buff_list)
+            
+            if random_number == status_debuff:
+                print("You have been hit by a status debuff!\n")
+                print(f"You got the {random_list_debuffs} debuff!\n")
+
+            elif random_number == status_buff:
+                print("You have been rewarded a status buff!\n")
+                print(f"You got the {random_list_buffs} buff!\n")
+
+            retry = input("\nWould you like to play again? type (Yes) to continue. Otherwise type anything else to quit: ").capitalize()
+            if retry == "Yes":
+                break
+
+            elif retry != "Yes":
+                print("\nThank You for playing my game!")
+                quit() 
