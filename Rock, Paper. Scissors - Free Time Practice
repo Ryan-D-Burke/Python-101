@@ -3,6 +3,7 @@ import random
 
 user_wins = 0
 computer_wins = 0
+ties = 0
 
 options = ["rock", "paper", "scissors"]
 
@@ -18,7 +19,7 @@ while True:
     random_number = random.randint(0, 2)
     computer_pick = options[random_number]
     print(f"You picked {user_input}.")
-    print(f"The Computer has picked {computer_pick}.")
+    print(f"Computer has picked {computer_pick}.")
 
     if user_input == "rock" and computer_pick == "scissors":
         print("You win.")
@@ -34,9 +35,11 @@ while True:
         
     elif user_input == computer_pick:
         print("You tied")
+        ties += 1
         
     else:
         print("You lose")
         computer_wins += 1
         
-print(f"You won {user_wins} times, and the computer won {computer_wins} times.")
+print(f"You won {user_wins} times, and the Computer won {computer_wins} times.")
+print(f"You and the computer tied {ties} times")
