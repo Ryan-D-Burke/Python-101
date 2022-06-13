@@ -17,7 +17,6 @@ turns = 0
 chances = 10
 conditional = 9
 
-
 while True:
     user_guess = input(f"Try to guess between 1 and {inserted_random_number} (You have {chances} left): ")
     turns += 1
