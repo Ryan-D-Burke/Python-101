@@ -1,5 +1,6 @@
 import random
 
+
 inserted_random_number = input("Enter a number to start the game: ")
 
 if inserted_random_number.isdigit():
