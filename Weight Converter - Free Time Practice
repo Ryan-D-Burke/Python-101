@@ -1,16 +1,19 @@
 # Ask user if they want to run the program for the first time
 choice = input("Would you like to run the program. Press (X) to continue: ")
+
 # Make a loop so the user doesn't have to run the code over and over again
 while (choice == "X"):
     # Ask the user for their weight and ask them what unit they used
     weight = float(input("Enter your weight: "))
     unit = input("(K)g or (L)bs: ")
-    # Determine and calcualte their weight opposite of their inputted unit
+
     if unit.upper() == "K":
         converted1 = (weight * 2.20462262)
-        print("Your weight in pounds is", round(converted1, 2))
+        print("Your weight in pounds is", round(converted1, 2)) # Converts the users weight to pounds
+         
     elif unit.upper() == "L":
         converted2 = (weight * 0.45359237)
         print("Your weight in kilograms is", round(converted2, 2))
+        
     # Ask the user if they want to run the program again
-    choice = input("Would you like to run the program again? Press (X) to continue: ")
+    choice = input("Would you like to run the program again? Press (X) to continue: ") Converts the users weight to kilograms
