@@ -7,11 +7,6 @@ def housekeeping():
         else:
             return sign_amount
 
-def calc_chars(base_amount):
-    char_length = len(base_amount) 
-    char_cost = char_length * 20.00
-    return char_cost
-
 def wood_type():
     wood = int(input("Enter a wood type: 1 for oak. 2 for birch. 3 for spruce.\n"))
     if wood == 1:
@@ -20,7 +15,12 @@ def wood_type():
         return "birch"
     elif wood == 3:
         return "spruce"
-  
+        
+def calc_chars(base_amount):
+    char_length = len(base_amount) 
+    char_cost = char_length * 20.00
+    return char_cost  
+
 def calc_colors():
     color = int(input("Enter a color. 1 for gold. 2 for silver.\n"))
     if color == 1:
