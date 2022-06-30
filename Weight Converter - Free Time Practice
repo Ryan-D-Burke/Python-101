@@ -1,19 +1,37 @@
-# Ask user if they want to run the program for the first time
-choice = input("Would you like to run the program. Press (X) to continue: ")
+def user_start():
+    user_input = input("Would you like to convert your body weight? Press (C) to continue.\n")
+    
+    if user_input.upper() == "C":
+        user_input = True
+    else:
+        user_input = False
+    
+    return user_input
 
-# Make a loop so the user doesn't have to run the code over and over again
-while (choice == "X"):
-    # Ask the user for their weight and ask them what unit they used
-    weight = float(input("Enter your weight: "))
-    unit = input("(K)g or (L)bs: ")
-
-    if unit.upper() == "K":
-        converted1 = (weight * 2.20462262)
-        print("Your weight in pounds is", round(converted1, 2)) # Converts the users weight to pounds
-         
-    elif unit.upper() == "L":
-        converted2 = (weight * 0.45359237)
-        print("Your weight in kilograms is", round(converted2, 2))
+def convert_weight(user_input):
+    while user_input == True:
+        user_weight = float(input("\nEnter your exact weight.\n"))
+        unit_type = input("\nDid you enter your weight in (K)g or (L)bs?\n")
         
-    # Ask the user if they want to run the program again
-    choice = input("Would you like to run the program again? Press (X) to continue: ") Converts the users weight to kilograms
+        if unit_type.upper() == "K":
+            lbs_converted = user_weight * 2.20462262
+            print(f"\nYour weight in pounds is {round(lbs_converted, 2)}.\n")       
+        elif unit_type.upper() == "L":
+            kg_converted = user_weight * 0.45359237
+            print(f"\nYour weight in kilograms is {round(kg_converted, 2)}.\n")          
+        else:
+            print("\nThe input that you have entered is invalid.\n")
+            
+        user_input = input("Would you like to enter enter another weight? Press (C) to continue.\n")
+        
+        if user_input.upper() == "C":
+            user_input = True
+        else:
+            user_input = False
+            
+def main():
+    user_input = user_start()
+    convert_weight(user_input)        
+
+if __name__ == "__main__":
+    main()
