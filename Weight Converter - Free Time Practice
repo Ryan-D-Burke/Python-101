@@ -9,7 +9,7 @@ def user_start():
     return user_input
 
 def convert_weight(user_input):
-    while user_input == True:
+    while user_input:
         user_weight = float(input("\nEnter your exact weight.\n"))
         unit_type = input("\nDid you enter your weight in (K)g or (L)bs?\n")
         
