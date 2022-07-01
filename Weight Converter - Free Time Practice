@@ -1,15 +1,12 @@
-def user_start():
+def get_start():
     user_input = input("Would you like to convert your body weight? Press (C) to continue.\n")
     
     if user_input.upper() == "C":
-        user_input = True
+        return True
     else:
-        user_input = False
+        return False
     
-    return user_input
-
-def convert_weight(user_input):
-    while user_input:
+def convert_weight():
         user_weight = float(input("\nEnter your exact weight.\n"))
         unit_type = input("\nDid you enter your weight in (K)g or (L)bs?\n")
         
@@ -22,16 +19,9 @@ def convert_weight(user_input):
         else:
             print("\nThe input that you have entered is invalid.\n")
             
-        user_input = input("Would you like to enter enter another weight? Press (C) to continue.\n")
-        
-        if user_input.upper() == "C":
-            user_input = True
-        else:
-            user_input = False
-            
 def main():
-    user_input = user_start()
-    convert_weight(user_input)        
+    while get_start():
+        convert_weight()        
 
 if __name__ == "__main__":
     main()
