@@ -19,14 +19,13 @@ def get_lists():
                         ]
     
     status_debuff_list = ["Wounds",
-                          "Winters Curse",
-                          "Sickness",
-                          "Gunk",
-                          "Frost",
-                          "Enfeebled",
-                          "Nightmare"
-                          ]
-    
+                        "Winters Curse",
+                        "Sickness",
+                        "Gunk",
+                        "Frost",
+                        "Enfeebled",
+                        "Nightmare"
+                        ]
     print("\nThese are the status buffs.\n")
     for statuses in status_buff_list:
         print(statuses, "\n")
@@ -48,7 +47,7 @@ def status_pick(status_buff_list, status_debuff_list):
     else:
         print("\nYou have recieved a status debuff!")
         print(f"You got the {random_status_debuff} debuff!\n")
-   
+
 def main(): 
         while get_start():
             status_buff_list, status_debuff_list = get_lists()
