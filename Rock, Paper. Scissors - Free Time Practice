@@ -42,7 +42,7 @@ def determine_winner(user_pick, computer_pick):
         computer_score += 1
         
     return user_score, computer_score
-             
+
 def final_score(user_score, computer_score):
     print("The Results are...\n")
     
