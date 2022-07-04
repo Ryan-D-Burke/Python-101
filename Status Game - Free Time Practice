@@ -26,6 +26,7 @@ def get_lists():
                         "Enfeebled",
                         "Nightmare"
                         ]
+                        
     print("\nThese are the status buffs.\n")
     for statuses in status_buff_list:
         print(statuses, "\n")
